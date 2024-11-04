@@ -1,0 +1,23 @@
+{
+    "manifest_version": 1,
+    "name": "Download Image on Click",
+    "version": "1.0",
+    "description": "Click on an image to download it.",
+    "permissions": [
+      "activeTab"
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "browser_action": {
+      "default_title": "Download Image"
+    }
+  }
+  
